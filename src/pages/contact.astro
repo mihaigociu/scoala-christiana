@@ -1,0 +1,76 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText title="Contactează-ne" />
+
+  <ContactUs
+    id="form"
+    title="Trimite-ne un mesaj"
+    subtitle="Ne poți contacta direct la secretariat sau ne poți trimite un mesaj prin formularul de mai jos."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Nume',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Mesaj',
+    }}
+    disclaimer={{
+      label:
+        'Prin trimiterea acestui formular, sunteți de acord cu colectarea datelor personale în conformitate cu politica GDPR.',
+    }}
+    description="Vom răspunde în cel mai scurt timp posibil."
+  />
+
+  <Features2
+    title="Date de contact"
+    items={[
+      {
+        title: 'Adresă',
+        description: 'Aleea Moldoveanu, nr. 3, Cluj-Napoca',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Telefon / Fax',
+        description: 'Tel. 0264 457 552, Fax 0264 457 553, Mobil 0785 070 590',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Email',
+        description: 'secretariat@scoalachristiana.ro',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Program secretariat',
+        description: 'Luni-Miercuri-Vineri: 08:00-15:00 | Marți-Joi: 10:00-18:00',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Program audiențe — Director',
+        description: 'Director: Precup Claudiu — Luni: 12:00-14:00, Miercuri: 11:00-13:00, Vineri: 10:00-13:00',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'Website',
+        description: 'www.scoalachristiana.ro',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,77 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Personalul școlii',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">
+      Personalul școlii
+    </Fragment>
+  </Hero>
+
+  <WidgetWrapper containerClass="max-w-4xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
+    <article class="prose prose-lg dark:prose-invert max-w-none px-4 md:px-8 space-y-6">
+      <p><strong>Director</strong>: Claudiu Cornel PRECUP</p>
+
+      <h2>Personal didactic</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-100 dark:bg-slate-700">
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left">Nr.</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left">Specialitate / Funcție</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left">Nume și prenume</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 dark:border-slate-600 p-2">1</td><td class="border border-gray-300 dark:border-slate-600 p-2">Profesor pentru învățământul primar</td><td class="border border-gray-300 dark:border-slate-600 p-2">Ioana-Maria HORVATH</td></tr>
+            <tr><td class="border border-gray-300 dark:border-slate-600 p-2">2</td><td class="border border-gray-300 dark:border-slate-600 p-2">Limba franceză</td><td class="border border-gray-300 dark:border-slate-600 p-2">Liliana DEREVICI</td></tr>
+            <tr><td class="border border-gray-300 dark:border-slate-600 p-2">3</td><td class="border border-gray-300 dark:border-slate-600 p-2">Matematică</td><td class="border border-gray-300 dark:border-slate-600 p-2">Alina TOMOIAGĂ</td></tr>
+            <tr><td class="border border-gray-300 dark:border-slate-600 p-2">4</td><td class="border border-gray-300 dark:border-slate-600 p-2">Cultură civică</td><td class="border border-gray-300 dark:border-slate-600 p-2">Lioara PETRUȚ</td></tr>
+            <tr><td class="border border-gray-300 dark:border-slate-600 p-2">5</td><td class="border border-gray-300 dark:border-slate-600 p-2">Istorie</td><td class="border border-gray-300 dark:border-slate-600 p-2">Ionița TIMIȘ</td></tr>
+            <tr><td class="border border-gray-300 dark:border-slate-600 p-2">6</td><td class="border border-gray-300 dark:border-slate-600 p-2">Educație plastică</td><td class="border border-gray-300 dark:border-slate-600 p-2">Lioara PETRUȚ</td></tr>
+            <tr><td class="border border-gray-300 dark:border-slate-600 p-2">7</td><td class="border border-gray-300 dark:border-slate-600 p-2">Consiliere și orientare școlară</td><td class="border border-gray-300 dark:border-slate-600 p-2">Elena-Andrea IFTODIE</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Personal didactic auxiliar</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-100 dark:bg-slate-700">
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left">Nr.</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left">Funcție</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left">Nume și prenume</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 dark:border-slate-600 p-2">1</td><td class="border border-gray-300 dark:border-slate-600 p-2">Secretar</td><td class="border border-gray-300 dark:border-slate-600 p-2">Petre Valentin COZLAC</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Personal nedidactic</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-100 dark:bg-slate-700">
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left">Nr.</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left">Funcție</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left">Nume și prenume</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 dark:border-slate-600 p-2">1</td><td class="border border-gray-300 dark:border-slate-600 p-2">Îngrijitor clădiri</td><td class="border border-gray-300 dark:border-slate-600 p-2">Ioana-Valentina CĂLIAN</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </WidgetWrapper>
+</Layout>

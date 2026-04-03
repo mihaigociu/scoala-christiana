@@ -1,0 +1,150 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Școala Altfel — 17-21 Martie 2025',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">Școala Altfel</Fragment>
+    <Fragment slot="subtitle">
+      Orar 17–21 Martie 2025 — programul „A Doua Șansă"
+    </Fragment>
+  </Hero>
+
+  <WidgetWrapper containerClass="max-w-5xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
+    <article class="prose prose-lg max-w-none">
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-lg mb-8">
+        <p class="m-0">
+          În anul școlar 2024-2025, programul „Școala Altfel" se desfășoară în perioada <strong>17–21 Martie 2025</strong>.
+        </p>
+      </div>
+
+      <!-- ═══ NIVEL PRIMAR ═══ -->
+      <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-200 pb-2">Nivelul Primar — clasele I-IV</h2>
+
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-blue-600 text-white">
+            <th class="px-3 py-2 text-left w-1/5">Ziua</th>
+            <th class="px-3 py-2 text-left w-1/5">Ora</th>
+            <th class="px-3 py-2 text-left">Activitatea</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="2">Luni, 17.03</td><td class="px-3 py-2">08:30–10:20</td><td class="px-3 py-2">„Atelierul Creativității: Arta Modelajului, Cusutului și Tăieturii cu Laser!"</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2">10:40–12:20</td><td class="px-3 py-2">„Magia Științei: Experimente Spectaculoase în Acțiune!"</td></tr>
+
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="2">Marți, 18.03</td><td class="px-3 py-2">08:30–10:20</td><td class="px-3 py-2">Vizită la Biblioteca Jud. „O. Goga", filiala Mănăștur</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2">10:40–12:20</td><td class="px-3 py-2">Vizită la Muzeul Zoologic din Cluj-Napoca</td></tr>
+
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="2">Miercuri, 19.03</td><td class="px-3 py-2">08:30–10:20</td><td class="px-3 py-2">„Fun with English" — atelier distractiv de Limba engleză</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2">10:40–12:20</td><td class="px-3 py-2">Magia ecranului: lumea filmului artistic</td></tr>
+
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="2">Joi, 20.03</td><td class="px-3 py-2">08:30–10:20</td><td class="px-3 py-2">„Șoferi în Acțiune: Instructaj Auto pentru Viitorii Conducători!"</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2">10:40–12:20</td><td class="px-3 py-2">Comunicarea cu o persoană cu deficiență de auz — invitat interpret limbaj mimico-gestual, Cristina Munteanu</td></tr>
+
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="2">Vineri, 21.03</td><td class="px-3 py-2">08:30–09:30</td><td class="px-3 py-2">„Provocarea Minții: Ghicitori Distractive pentru Iscusiți Detectivi!"</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2">10:00–12:00</td><td class="px-3 py-2">Vizită la complexul „Moara de Vânt", loc. Sălicea, jud. Cluj</td></tr>
+        </tbody>
+      </table>
+
+      <!-- ═══ NIVEL GIMNAZIAL ═══ -->
+      <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-blue-200 pb-2 mt-12">Nivelul Gimnazial — Secundar Inferior</h2>
+
+      <!-- Anul I -->
+      <h3 class="text-lg font-semibold text-blue-700 mt-8 mb-2">Anul I gimnazial</h3>
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-blue-600 text-white">
+            <th class="px-3 py-2 text-left w-1/5">Ziua</th>
+            <th class="px-3 py-2 text-left w-1/5">Ora</th>
+            <th class="px-3 py-2 text-left">Activitatea</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold">Luni, 17.03</td><td class="px-3 py-2">14:00–17:00</td><td class="px-3 py-2">„Cultura lumii" — tur vizual al marilor muzee ale lumii + discuții</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="2">Marți, 18.03</td><td class="px-3 py-2">13:00–14:00</td><td class="px-3 py-2">„O vizită prin Paris" — documentar</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2">14:00–16:00</td><td class="px-3 py-2">„Să ne jucăm cu numerele" — atelier tehnico-științific</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="2">Miercuri, 19.03</td><td class="px-3 py-2">17:00–18:00</td><td class="px-3 py-2">Rolul inteligenței emoționale în viața noastră</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2">18:00–20:00</td><td class="px-3 py-2">Sateliții artificiali</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2 font-semibold">Joi, 20.03</td><td class="px-3 py-2">17:00–18:00</td><td class="px-3 py-2">Concurs „Cine știe câștigă" — activitate frontală, cu scop recreativ</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold">Vineri, 21.03</td><td class="px-3 py-2">17:00–18:00</td><td class="px-3 py-2">„Geopolitica azi" — atelier istoric</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Anul II -->
+      <h3 class="text-lg font-semibold text-blue-700 mt-8 mb-2">Anul II gimnazial</h3>
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-blue-600 text-white">
+            <th class="px-3 py-2 text-left w-1/5">Ziua</th>
+            <th class="px-3 py-2 text-left w-1/5">Ora</th>
+            <th class="px-3 py-2 text-left">Activitatea</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="2">Luni, 17.03</td><td class="px-3 py-2">13:00–15:00</td><td class="px-3 py-2">„Parisul, orașul lumii"</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2">15:00–17:00</td><td class="px-3 py-2">„Corpuri geometrice în natură" — atelier tehnico-științific</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2 font-semibold">Marți, 18.03</td><td class="px-3 py-2">14:00–17:00</td><td class="px-3 py-2">„Cultura lumii" — tur vizual al marilor muzee ale lumii + discuții</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="2">Miercuri, 19.03</td><td class="px-3 py-2">15:00–16:00</td><td class="px-3 py-2">„Put on the teacher's shoes"</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2">16:00–17:00</td><td class="px-3 py-2">Rolul inteligenței emoționale în viața noastră</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2 font-semibold">Vineri, 21.03</td><td class="px-3 py-2">15:00–16:00</td><td class="px-3 py-2">„Geopolitica azi" — atelier istoric</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Anul III -->
+      <h3 class="text-lg font-semibold text-blue-700 mt-8 mb-2">Anul III secundar inferior</h3>
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-blue-600 text-white">
+            <th class="px-3 py-2 text-left w-1/5">Ziua</th>
+            <th class="px-3 py-2 text-left w-1/5">Ora</th>
+            <th class="px-3 py-2 text-left">Activitatea</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="2">Luni, 17.03</td><td class="px-3 py-2">15:00–17:00</td><td class="px-3 py-2">„Parisul, orașul lumii" — documentar</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2">17:00–19:00</td><td class="px-3 py-2">„Matematica distractivă" — atelier tehnico-științific</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2 font-semibold">Marți, 18.03</td><td class="px-3 py-2">17:00–20:00</td><td class="px-3 py-2">„Vizită la grădinile Semiramidei" — vizionare de film</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="3">Miercuri, 19.03</td><td class="px-3 py-2">12:00–13:00</td><td class="px-3 py-2">Rolul inteligenței emoționale în viața noastră</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2">14:00–15:00</td><td class="px-3 py-2">„Teach the teacher something"</td></tr>
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2">15:00–18:00</td><td class="px-3 py-2">„Cultura lumii" — tur vizual al marilor muzee ale lumii + discuții</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2 font-semibold">Vineri, 21.03</td><td class="px-3 py-2">17:00–18:00</td><td class="px-3 py-2">„Geopolitica azi" — atelier istoric</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Anul IV -->
+      <h3 class="text-lg font-semibold text-blue-700 mt-8 mb-2">Anul IV secundar inferior</h3>
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-blue-600 text-white">
+            <th class="px-3 py-2 text-left w-1/5">Ziua</th>
+            <th class="px-3 py-2 text-left w-1/5">Ora</th>
+            <th class="px-3 py-2 text-left">Activitatea</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr class="hover:bg-blue-50"><td class="px-3 py-2 font-semibold">Marți, 18.03</td><td class="px-3 py-2">16:00–18:00</td><td class="px-3 py-2">„Matematica distractivă" — atelier tehnico-științific</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2 font-semibold" rowspan="3">Miercuri, 19.03</td><td class="px-3 py-2">13:00–14:00</td><td class="px-3 py-2">Rolul inteligenței emoționale în viața noastră</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2">14:00–16:00</td><td class="px-3 py-2">„Astronomul" — vizionare film</td></tr>
+          <tr class="bg-gray-50 hover:bg-blue-50"><td class="px-3 py-2">16:00–17:00</td><td class="px-3 py-2">„Make school fun by of school"</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Metodologie -->
+      <div class="bg-blue-50 border border-blue-200 p-5 rounded-lg mt-10 flex items-center gap-3">
+        <svg class="w-6 h-6 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+        <a href="/images/uploads/2024/11/OME-6479-din-2023-Metodologie-Scoala-Altfel.pdf" target="_blank" rel="noopener" class="text-blue-700 font-semibold hover:underline">
+          Descarcă Metodologia de desfășurare a programului „Școala Altfel"
+        </a>
+      </div>
+
+    </article>
+  </WidgetWrapper>
+</Layout>

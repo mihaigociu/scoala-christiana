@@ -1,0 +1,68 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Despre noi',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">
+      Școala Gimnazială <span class="text-accent">Christiana</span>
+    </Fragment>
+  </Hero>
+
+  <WidgetWrapper containerClass="max-w-4xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
+    <article class="prose prose-lg dark:prose-invert max-w-none px-4 md:px-8">
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-lg mb-8">
+        <p class="m-0 text-blue-800 font-medium">
+          Unitate privată de învățământ preuniversitar, înființată în anul 2012, acreditată prin OM nr. 5661 din 30.12.2019,
+          aflată sub patronajul Arhiepiscopiei Ortodoxe Române a Vadului, Feleacului și Clujului.
+        </p>
+      </div>
+
+      <p>
+        Școala Gimnazială CHRISTIANA a fost înființată prin inițiativa <strong>Asociației Filantropice Medical-Creștine
+        „Christiana"</strong> din Cluj-Napoca.
+      </p>
+
+      <h2 class="text-xl font-bold text-gray-800 border-b-2 border-blue-200 pb-2 mt-10">Programul „A Doua Șansă"</h2>
+      <p>
+        Încă de la înființare, în cadrul școlii se desfășoară programul de învățământ „A Doua Șansă", adresat celor
+        care nu au finalizat perioada de pregătire școlară obligatorie și au depășit cu cel puțin patru ani vârsta de
+        școlarizare.
+      </p>
+      <p>
+        Pe lângă activitățile specifice programului, cursanții pot beneficia de:
+      </p>
+      <ul class="space-y-1">
+        <li>Consiliere, asistare și îndrumare psihologică și profesională</li>
+        <li>Sprijin material, atunci când este cazul</li>
+      </ul>
+
+      <h2 class="text-xl font-bold text-gray-800 border-b-2 border-blue-200 pb-2 mt-10">Dotări</h2>
+      <p>
+        În prezent, școala dispune de <strong>șapte săli de clasă</strong>, dotate cu mobilierul și materialele
+        necesare desfășurării activităților, astfel încât acestea să fie cât mai atractive pentru cursanți.
+      </p>
+
+      <div class="not-prose bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mt-10 text-center">
+        <div class="flex justify-center mb-3">
+          <svg class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </div>
+        <p class="font-semibold text-gray-800 text-lg mb-1">Vizitați-ne!</p>
+        <p class="text-gray-600 mb-1">Aleea Moldoveanu, nr. 3, Cluj-Napoca</p>
+        <p class="text-gray-500 text-sm mb-4">Zilnic, între orele 9:00–16:00</p>
+        <p class="text-blue-700 font-semibold text-lg">Vă așteptăm cu drag!</p>
+      </div>
+
+    </article>
+  </WidgetWrapper>
+</Layout>

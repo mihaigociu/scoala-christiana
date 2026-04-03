@@ -1,0 +1,63 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Formularul de sesizare anonimă',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">Formularul de sesizare anonimă</Fragment>
+  </Hero>
+
+  <WidgetWrapper containerClass="max-w-4xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
+    <article class="prose prose-lg max-w-none">
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-lg mb-8">
+        <p class="m-0 text-blue-800">
+          Acest formular este destinat semnalării faptelor de violență în cadrul Școlii Gimnaziale Christiana Cluj-Napoca.
+          Rolul lui este de a ne ajuta să identificăm situațiile problematice și soluțiile la acestea.
+        </p>
+      </div>
+
+      <p>
+        Este important să completezi acest formular cât de repede poți după petrecerea faptei și să incluzi cât mai multe detalii reale.
+      </p>
+      <p>
+        Completarea sa nu necesită includerea numelui tău sau a altor date personale. Dacă îți dorești, poți menționa
+        numele tău, caz în care acesta va fi anonimizat. Identitatea ta va fi cunoscută doar de directorul unității de
+        învățământ sau persoana/persoanele desemnată/desemnate de acesta să deschidă răspunsul tău la acest formular.
+      </p>
+      <p>
+        Toate informațiile vor fi tratate cu seriozitate și maximă confidențialitate. <strong>Ești în deplină siguranță.</strong>
+      </p>
+
+      <div class="not-prose bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-8 my-10 text-center">
+        <div class="flex justify-center mb-4">
+          <svg class="w-12 h-12 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <p class="font-semibold text-gray-800 text-lg mb-1">
+          Formularul de sesizare anonimă
+        </p>
+        <p class="text-gray-600 text-sm mb-6">
+          Sesizarea faptelor de violență și/sau a suspiciunilor privind consumul de substanțe psiho-active (droguri) și alte abateri de la normele de bună conduită
+        </p>
+        <a
+          href="https://forms.gle/vaE5kxPniENrDo3V7"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 bg-amber-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-amber-700 transition shadow-md"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          Accesează formularul
+        </a>
+      </div>
+
+    </article>
+  </WidgetWrapper>
+</Layout>

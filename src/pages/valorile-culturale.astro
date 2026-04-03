@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Valorile culturale ale școlii',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">
+      Valorile culturale ale școlii
+    </Fragment>
+  </Hero>
+
+  <WidgetWrapper containerClass="max-w-4xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
+    <article class="prose prose-lg dark:prose-invert max-w-none px-4 md:px-8 space-y-6">
+      <h2 class="text-2xl font-bold text-primary border-l-4 border-primary pl-4">Viziune</h2>
+      <p>
+        Viziunea noastră este ca fiecare elev să poată participa la procesul de educație și să fie educat în funcție 
+        de capacitățile, potențialul și opțiunea fiecăruia.
+      </p>
+
+      <h2 class="text-2xl font-bold text-primary border-l-4 border-primary pl-4">Misiune</h2>
+      <p>
+        Misiunea noastră constă în educarea fiecărei persoane care se încadrează și care dorește să aibă acces la 
+        programul școlar „A Doua Șansă".
+      </p>
+
+      <h2 class="text-2xl font-bold text-primary border-l-4 border-primary pl-4">Scopul școlii</h2>
+      <p>
+        Dorim să susținem formarea educativă a elevilor școlii în vederea dezvoltării competențelor lor spre maximul 
+        potențial, pentru o mai bună implicare socială și integrare profesională.
+      </p>
+
+      <p>
+        <a href="/images/uploads/2017/09/manualul-calității-Școala-Gimnazială-Christiana.pdf" class="text-primary font-semibold hover:underline">
+          Descarcă Manualul calității Școlii Gimnaziale CHRISTIANA (PDF)
+        </a>
+      </p>
+    </article>
+  </WidgetWrapper>
+</Layout>

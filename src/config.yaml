@@ -1,0 +1,66 @@
+site:
+  name: Școala Gimnazială Christiana
+  site: 'https://scoalachristiana.ro'
+  base: '/'
+  trailingSlash: false
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Școala Gimnazială Christiana
+    template: '%s — Școala Gimnazială Christiana'
+  description: 'Școala Gimnazială Christiana din Cluj-Napoca — programul de învățământ „A Doua Șansă" pentru finalizarea educației de bază.'
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Școala Gimnazială Christiana
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+
+i18n:
+  language: ro
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: '/noutati/%slug%'
+      robots:
+        index: true
+
+    list:
+      isEnabled: true
+      pathname: 'noutati'
+      robots:
+        index: true
+
+    category:
+      isEnabled: true
+      pathname: 'categorie'
+      robots:
+        index: true
+
+    tag:
+      isEnabled: true
+      pathname: 'eticheta'
+      robots:
+        index: false
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+
+ui:
+  theme: 'light:only'

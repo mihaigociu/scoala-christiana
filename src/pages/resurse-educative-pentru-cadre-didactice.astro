@@ -1,0 +1,87 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Resurse educative pentru cadre didactice',
+};
+
+const platforme = [
+  {
+    nume: 'Manuale digitale',
+    url: 'https://www.manuale.edu.ro/',
+    descriere: null,
+  },
+  {
+    nume: 'Școala pe net',
+    url: 'https://scoalapenet.ro/',
+    descriere: 'Platformă cu resurse pentru toți profesorii interesați să-și dezvolte competențele digitale și să susțină activități de învățare cu ajutorul noilor tehnologii.',
+  },
+  {
+    nume: 'Platforma Digitaliada',
+    url: 'https://www.digitaliada.ro/',
+    descriere: 'Platforma www.digitaliada.ro este un spațiu ce încurajează crearea și partajarea de conținut educațional liber, ce poate fi folosit de orice cadru didactic. Tot în platformă pot fi găsite materialele digitale educaționale realizate în cadrul tuturor edițiilor proiectului Digitaliada, de către profesorii și autorii parteneri Digitaliada (secțiunea eConținut).',
+  },
+  {
+    nume: 'Platforma iTeach',
+    url: 'https://iteach.ro',
+    descriere: 'Platforma iTeach este un spațiu colaborativ dedicat exclusiv dezvoltării profesionale continue a cadrelor didactice. Are cursuri online gratuite susținute de Institutul de Științe ale Educației, CCD-uri, Universitatea din București, companii și ONG-uri. Găzduiește trei reviste electronice pentru cadre didactice.',
+  },
+  {
+    nume: 'Platforma NextLab',
+    url: 'https://robo.nextlab.tech/',
+    descriere: 'Platformă cu activități de învățare din domeniul informaticii și roboticii. Permite orchestrarea de lecții și teste online și livrarea lor în mod automat cu ajutorul unui asistent de învățare bazat pe inteligență artificială dotat cu voce în limba română. Se poate folosi pentru a orchestra lecții și teste online la orice disciplină.',
+  },
+  {
+    nume: 'ReteauaEDU.ro',
+    url: 'https://reteauaedu.ro',
+    descriere: 'Rețea de platforme școlare eLearning care permit crearea și gestionarea de lecții digitale, comunicare între membrii comunității de profesori, inclusiv soluție video-conferință. Profesorii școlii pot crea și distribui conținut digital, pot interacționa și realiza evaluări complexe.',
+  },
+  {
+    nume: 'Platforma Livresq',
+    url: 'https://livresq.com/ro/',
+    descriere: 'Este editor vizual care permite crearea de lecții în format digital. Acesta facilitează crearea de lecții interactive, ce conțin texte, galerii de poze, animatii, audio, video, atasamente, quiz-uri și alte elemente specifice, fără a fi necesare cunoștințe tehnice sau de programare.',
+  },
+  {
+    nume: 'Platforma MyKoolio',
+    url: 'https://www.mykoolio.com',
+    descriere: 'Platformă educațională online ce pune la dispoziția profesorilor accesul gratuit la materialele sale educaționale - lecții, teste și exerciții pentru limba română și matematică clasele I-VIII, și geografie, clasa a VI-a.',
+  },
+  {
+    nume: 'Platforma Kinderpedia',
+    url: 'https://kinderpedia.co',
+    descriere: 'Soluție completă de comunicare și management pentru școli și grădinițe disponibilă pe web și ca aplicație de mobil (Android și iOS). Platforma este gratuită și ajută la gestionarea clasei/grupei și a activităților de învățare, dar și pentru comunicare și colaborare. Este adaptată pentru învățământul preuniversitar și este în limba română. Permite atât înscrierea elevilor cât și a părinților. Are modul de video-conferință (Zoom) integrat cu orarul clasei dar și catalog de note cu posibilitatea de atribuire și notare teme către elevi. Elevii se pot înscrie doar cu un cod unic furnizat de profesor/învățător.',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">
+      Resurse educative pentru cadre didactice
+    </Fragment>
+  </Hero>
+
+  <WidgetWrapper containerClass="max-w-4xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
+    <article class="max-w-none px-4 md:px-8">
+      <div class="grid gap-4">
+        {platforme.map((p) => (
+          <div class="rounded-lg border border-gray-200 dark:border-slate-700 p-5 hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+              <div>
+                <a href={p.url} target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-blue-600 dark:text-blue-400 hover:underline">
+                  {p.nume}
+                </a>
+                {p.descriere && (
+                  <p class="mt-1.5 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{p.descriere}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </article>
+  </WidgetWrapper>
+</Layout>

@@ -1,0 +1,30 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Orar școlar',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">
+      Orar școlar
+    </Fragment>
+    <Fragment slot="subtitle">
+      Orarul cursurilor pentru anul școlar curent
+    </Fragment>
+  </Hero>
+
+  <div class="-mt-12 md:-mt-20">
+  <Content isAfterContent={true}>
+    <Fragment slot="content">
+      <div class="prose prose-lg max-w-4xl mx-auto">
+        <p>Orarul școlar va fi afișat în perioada următoare.</p>
+      </div>
+    </Fragment>
+  </Content>
+  </div>
+</Layout>

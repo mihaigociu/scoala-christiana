@@ -1,0 +1,36 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Metodologia programului „A Doua Șansă"',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline="Programul A Doua Șansă">
+    <Fragment slot="title">
+      Metodologia programului
+    </Fragment>
+    <Fragment slot="subtitle">
+      Metodologia privind organizarea Programului „A Doua Șansă" — învățământ primar și secundar
+    </Fragment>
+  </Hero>
+
+  <WidgetWrapper containerClass="max-w-4xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
+    <article class="prose prose-lg dark:prose-invert max-w-none px-4 md:px-8 space-y-6">
+      <p>
+        Organizarea programului „A Doua Șansă" se realizează conform <strong>Ordinului Ministerului Educației nr. 3062 din 25 ianuarie 2022</strong>, 
+        care reglementează metodologia privind organizarea programului atât la nivel primar, cât și la nivel secundar inferior.
+      </p>
+
+      <div class="bg-blue-50 dark:bg-blue-900/30 p-6 rounded-lg">
+        <p class="font-semibold mb-2">Document oficial:</p>
+        <a href="/images/uploads/2022/10/OMEN-3062-din-15-ian-2022-Metodologie-noua-A-Doua-Sansa.pdf" class="text-primary font-semibold hover:underline">
+          Descarcă Metodologia completă (PDF)
+        </a>
+      </div>
+    </article>
+  </WidgetWrapper>
+</Layout>

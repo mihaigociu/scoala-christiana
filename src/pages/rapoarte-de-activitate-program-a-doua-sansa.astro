@@ -1,0 +1,58 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Rapoarte de activitate — Programul A Doua Sansa',
+};
+
+const rapoarte = [
+  {
+    an: '2019-2020',
+    href: '/images/uploads/2023/03/Raport-de-activitate-Scoala-Gimn-Christiana-2019-2020.pdf',
+  },
+  {
+    an: '2020-2021',
+    href: '/images/uploads/2023/03/Raport-de-activitate-Scoala-Gimn-Christiana-2020-2021.pdf',
+  },
+  {
+    an: '2021-2022',
+    href: '/images/uploads/2023/03/Raport-de-activitate-Scoala-Gimn-Christiana-2021-2022.pdf',
+  },
+  {
+    an: '2022-2023',
+    href: '',
+  },
+  {
+    an: '2023-2024',
+    href: '/images/uploads/2025/04/Raport-de-activitate-Scoala-Gimn-Christiana-2023-2024.pdf',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline='Programul "A Doua Sansa"'>
+    <Fragment slot="title">
+      Rapoarte de activitate
+    </Fragment>
+    <Fragment slot="subtitle">
+      Rapoartele anuale de activitate ale programului „A Doua Sansa" din cadrul Scolii Gimnaziale Christiana
+    </Fragment>
+  </Hero>
+
+  <WidgetWrapper containerClass="max-w-3xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
+    <div class="px-4 md:px-8">
+      <ul class="space-y-3">
+        {rapoarte.map((r) => (
+          <li class="p-4 rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900">
+            {r.href
+              ? <a href={r.href} class="text-primary font-semibold hover:underline">Descarca raportul de activitate — anul scolar {r.an}</a>
+              : <span class="text-muted dark:text-slate-400">Raport de activitate — anul scolar {r.an} <em class="text-sm">(in curs de publicare)</em></span>
+            }
+          </li>
+        ))}
+      </ul>
+    </div>
+  </WidgetWrapper>
+</Layout>

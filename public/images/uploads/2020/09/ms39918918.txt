@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Fișier de verificare a proprietății asupra domeniului pentru Microsoft 365 - plasați în rădăcina site-ului",
+  "Domain": "scoalachristiana.ro",
+  "Id": "3d630d1c-5290-4035-ab3a-e0fd4af340d0"
+}

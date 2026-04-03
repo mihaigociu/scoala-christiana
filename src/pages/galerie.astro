@@ -1,0 +1,28 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Galerie',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">
+      Galerie foto
+    </Fragment>
+    <Fragment slot="subtitle">
+      Imagini din activitățile Școlii Gimnaziale Christiana
+    </Fragment>
+  </Hero>
+
+  <WidgetWrapper containerClass="max-w-5xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
+    <article class="prose prose-lg dark:prose-invert max-w-none px-4 md:px-8 space-y-6">
+      <p class="text-center text-muted">
+        Galeria foto va fi actualizată în curând cu imagini din activitățile școlii.
+      </p>
+    </article>
+  </WidgetWrapper>
+</Layout>

@@ -1,0 +1,211 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+
+const metadata = {
+  title: 'Unități de învățământ cu program liceal / seral',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero>
+    <Fragment slot="title">
+      Oferta liceelor pentru anul școlar 2025-2026
+    </Fragment>
+  </Hero>
+
+  <WidgetWrapper containerClass="max-w-5xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
+    <article class="prose prose-lg dark:prose-invert max-w-none px-4 md:px-8 space-y-6">
+
+      <h2>Pentru absolvenții de 8 clase (anul II gimnazial)</h2>
+
+      <p><strong>Absolvenții programului „A Doua Șansă" (anul II gimnazial), pot continua studiile în clasa a IX-a, regim: frecvență redusă, dacă au împlinit vârsta de 20 ani (sau vor împlini 20 de ani cel târziu în luna Septembrie 2025).</strong></p>
+
+      <div class="not-prose overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-100 dark:bg-slate-700">
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold w-12">Nr.</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Denumire unitate de învățământ</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Clasa</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Program</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Specializarea</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Locuri</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Liceul Teoretic „Victor Babeș" Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a IX-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">frecvență redusă</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Științe sociale</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-598-542</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">2</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Liceul Tehnologic UCECOM „Spiru Haret" Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a IX-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Coafor stilist</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-541-948</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">3</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Liceul Teoretic „Virgil Madgearu" Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a IX-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2"></td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-426-111</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">4</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Liceul Teoretic „Horia, Cloșca și Crișan" Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a IX-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">frecvență redusă</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Științe sociale</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/26 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-596-697</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Pentru absolvenții de 10 clase (anul IV secundar inferior)</h2>
+
+      <p><strong>Absolvenții programului „A Doua Șansă", anul IV secundar inferior, pot continua studiile la Liceele/Colegiile care au clasa a XI-a, regim: seral.</strong></p>
+
+      <div class="not-prose overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-100 dark:bg-slate-700">
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold w-12">Nr.</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Denumire unitate de învățământ</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Clasa</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Program</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Specializarea</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Locuri</th>
+              <th class="border border-gray-300 dark:border-slate-600 p-2 text-left font-semibold">Contact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Colegiul Tehnic de Comunicații „Augustin Maior" Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Electronică, automatizări</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri (dual - 8 locuri)</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-594-995</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">2</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Colegiul de Servicii în Turism „Napoca"</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Tehnician în turism</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-562-588</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">3</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Colegiul Economic „Iulian Pop" Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Tehnician în activități de comerț</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-592-081</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">4</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Colegiul Tehnic „Anghel Saligny"</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Tehnician în construcții și lucrări publice</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0364-566-509</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">5</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Colegiul Tehnic Energetic Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Tehnician electrotehnist</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-449-527</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">6</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Colegiul Tehnic Turda</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2"></td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-316-957</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">7</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Liceul Tehnologic „Alexandru Borza" Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Tehnician transporturi</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-414-673</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">8</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Liceul Tehnologic „Aurel Vlaicu" Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Tehnician prelucrări pe mașini cu coadă numerică</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0371-149-793</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">9</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Liceul Tehnologic de Transporturi „Transilvania" Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Tehnician mecanic pentru întreținere și reparații</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-449-645</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">10</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Liceul Tehnologic „Constantin Brâncuși" Dej</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Tehnician mecanic pentru întreținere și reparații</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-206-291</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">11</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Liceul Tehnologic „Someș" Dej</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Organizator banqueting</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-215-114</td>
+            </tr>
+            <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+              <td class="border border-gray-300 dark:border-slate-600 p-2">12</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Liceul Tehnologic UCECOM „Spiru Haret" Cluj-Napoca</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">a XI-a</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">seral</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">Coafor stilist</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">1 clasă/28 locuri</td>
+              <td class="border border-gray-300 dark:border-slate-600 p-2">0264-541-948</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </article>
+  </WidgetWrapper>
+</Layout>

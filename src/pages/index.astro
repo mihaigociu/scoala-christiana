@@ -1,0 +1,163 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Școala Gimnazială Christiana — Programul „A Doua Șansă"',
+  ignoreTitleTemplate: true,
+};
+
+const galleryImages = [
+  { src: '/images/uploads/2024/04/Banner-2-homepage-1024x722.jpg', alt: 'Școala Gimnazială Christiana — Programul A Doua Șansă' },
+  { src: '/images/uploads/2024/04/Banner-homepage-site-avantaje-A2S-1-1024x722.jpg', alt: 'Avantajele Programului A Doua Șansă' },
+  { src: '/images/uploads/2016/05/dscn1853-1024x768.jpg', alt: 'Școala Gimnazială Christiana' },
+  { src: '/images/uploads/2016/05/dscn1854-1024x768.jpg', alt: 'Curtea școlii' },
+  { src: '/images/uploads/2016/05/dscn1857-1024x768.jpg', alt: 'Activități școlare' },
+  { src: '/images/uploads/2016/05/dscn1859-1024x768.jpg', alt: 'Clădirea școlii' },
+  { src: '/images/uploads/2016/05/dscn1860-1024x768.jpg', alt: 'Școala Christiana' },
+  { src: '/images/uploads/2016/05/dscn1864-1024x768.jpg', alt: 'Sala de clasă' },
+  { src: '/images/uploads/2016/05/dscn1866-1024x768.jpg', alt: 'Interiorul școlii' },
+  { src: '/images/uploads/2016/05/dscn1867-1024x768.jpg', alt: 'Activități educative' },
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Image Gallery / Carousel -->
+  <section class="relative w-full max-w-5xl mx-auto mt-6 mb-8 px-4">
+    <div class="relative overflow-hidden rounded-xl shadow-lg bg-white" id="gallery">
+      <div class="flex transition-transform duration-500 ease-in-out" id="gallery-track">
+        {galleryImages.map((img) => (
+          <div class="w-full flex-shrink-0">
+            <img
+              src={img.src}
+              alt={img.alt}
+              class="w-full h-auto"
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+      <!-- Navigation arrows -->
+      <button
+        id="gallery-prev"
+        class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-md transition"
+        aria-label="Imaginea anterioară"
+      >
+        &#10094;
+      </button>
+      <button
+        id="gallery-next"
+        class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-md transition"
+        aria-label="Imaginea următoare"
+      >
+        &#10095;
+      </button>
+      <!-- Dots -->
+      <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2" id="gallery-dots">
+        {galleryImages.map((_, i) => (
+          <button
+            class:list={['w-3 h-3 rounded-full transition', i === 0 ? 'bg-white' : 'bg-white/50']}
+            data-index={i}
+            aria-label={`Imaginea ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('astro:page-load', () => {
+      const track = document.getElementById('gallery-track') as HTMLElement | null;
+      const dots = document.querySelectorAll('#gallery-dots button');
+      const prevBtn = document.getElementById('gallery-prev');
+      const nextBtn = document.getElementById('gallery-next');
+      if (!track || !prevBtn || !nextBtn) return;
+
+      const total = dots.length;
+      let current = 0;
+      let autoplayTimer: ReturnType<typeof setInterval>;
+
+      function goTo(index: number) {
+        current = ((index % total) + total) % total;
+        track!.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, i) => {
+          d.classList.toggle('bg-white', i === current);
+          d.classList.toggle('bg-white/50', i !== current);
+        });
+      }
+
+      prevBtn.addEventListener('click', () => { goTo(current - 1); resetAutoplay(); });
+      nextBtn.addEventListener('click', () => { goTo(current + 1); resetAutoplay(); });
+      dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          goTo(Number((dot as HTMLElement).dataset.index));
+          resetAutoplay();
+        });
+      });
+
+      function resetAutoplay() {
+        clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(() => goTo(current + 1), 5000);
+      }
+      resetAutoplay();
+    });
+  </script>
+
+  <!-- Homepage Text Content (matching old WordPress homepage) -->
+  <section class="max-w-4xl mx-auto px-4 py-8">
+    <!-- Structure link -->
+    <div class="mb-6 text-center">
+      <a
+        href="/cursanti/structura-an-scolar"
+        class="inline-block bg-blue-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-blue-700 transition text-lg"
+      >
+        STRUCTURA ANULUI ȘCOLAR 2025-2026
+      </a>
+    </div>
+
+    <!-- Enrollment info -->
+    <div class="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-blue-800 mb-3">
+        Înscrieri în programul „A Doua Șansă" pentru anul școlar 2025-2026
+      </h2>
+      <p class="text-gray-700 mb-4">
+        Dosarele de înscriere în programul „A Doua Șansă" se pot depune la secretariatul școlii
+        în intervalul <strong>Luni-Vineri</strong>, între orele <strong>09:00 - 16:00</strong>.
+      </p>
+
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">Documente necesare pentru dosarul de înscriere:</h3>
+      <ul class="list-disc list-inside text-gray-700 space-y-1 mb-6">
+        <li>Act de identitate în copie și original (pentru beneficiarii minori se vor prezenta și documentele părinților/reprezentanților legali)</li>
+        <li>Certificat de naștere în copie și original</li>
+        <li>Certificat de căsătorie în copie și original (dacă este cazul)</li>
+        <li>Adeverință școlară / foaie matricolă de la ultima școală absolvită</li>
+      </ul>
+
+      <div class="border-t border-blue-200 pt-4">
+        <h3 class="text-lg font-bold text-gray-800 mb-2">Program cu publicul</h3>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <p class="font-semibold text-gray-800">Secretariat:</p>
+            <p class="text-gray-700">Luni - Miercuri - Vineri: 08:00 - 15:00</p>
+            <p class="text-gray-700">Marți - Joi: 10:00 - 18:00</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-800">Program audiențe:</p>
+            <p class="text-gray-700"><strong>Director: Precup Claudiu</strong></p>
+            <p class="text-gray-700">Luni: 12:00 - 14:00</p>
+            <p class="text-gray-700">Miercuri: 11:00 - 13:00</p>
+            <p class="text-gray-700">Vineri: 10:00 - 13:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest blog posts -->
+  <BlogLatestPosts
+    title="Ultimele noutăți"
+    information="Cele mai recente informații despre activitățile și evenimentele din cadrul Școlii Gimnaziale Christiana."
+  />
+
+</Layout>
