@@ -22,11 +22,11 @@ Majoritatea activităților prevăzute în orarul special pentru săptămâna �
 
 a.       **Cultural-artistic și multicultural**: 7 activități; 25 beneficiari; 5 cadre didactice; resurse utilizate: studio de filmări, aparatură și calculatoare de procesare video și audio; documentare online; obiective istorice din centrul vechi al municipiului); 4 parteneri (Via Cluj TV, Muzeul de Istorie al Transilvaniei; Teatrul Național Cluj-Napoca, Biblioteca județeană „O. Goga”, filiala Mănăștur);
 
-***„Ziua porților deschise la Teatrul Național Cluj” ****– *în cadrul acestei activități participanții au avut ocazia de a cunoaște unul din actorii Teatrului Național din Cluj-Napoca, de la care au putut afla cum este viața unui actor la teatru, în special dincolo de cortină, precum și o serie de aspecte interesante privind istoricul și arhitectura interioară a teatrului din Cluj-Napoca.
+**\*„Ziua porților deschise la Teatrul Național Cluj” \*\***– \*în cadrul acestei activități participanții au avut ocazia de a cunoaște unul din actorii Teatrului Național din Cluj-Napoca, de la care au putut afla cum este viața unui actor la teatru, în special dincolo de cortină, precum și o serie de aspecte interesante privind istoricul și arhitectura interioară a teatrului din Cluj-Napoca.
 
 b. **Tehnico-științific și sportiv:** 5 activități; 35 elevi; 5 cadre didactice; resurse utilizate: imprimantă 3D, filament pentru imprimare; calculator; platformă online de documentare; 1 parteneri (Muzeul Farmaciei);
 
-**„*În pas cu tehnologia”****- *în cadrul acestui activități participanții au putut observa și înțelege modul de funcționare al unei imprimante 3D; de asemenea, au putut experimenta tipărirea în format tridimensional a unor obiecte, precum Turnul Eiffel din Paris, piese de șah, semne de carte, componentele unui avion).
+**„\*În pas cu tehnologia”\*\***- \*în cadrul acestui activități participanții au putut observa și înțelege modul de funcționare al unei imprimante 3D; de asemenea, au putut experimenta tipărirea în format tridimensional a unor obiecte, precum Turnul Eiffel din Paris, piese de șah, semne de carte, componentele unui avion).
 
 c. **Cetățenie democratică și responsabilitate socială:** 3 activități; 30 elevi; 3 cadre didactice; resurse utilizate (Constituția României); 2 parteneri (Mădălina Sarac – reprezentant domeniul juridic);
 
@@ -36,15 +36,15 @@ d.  **Educație pentru sănătate și stil de viață sănătos:** număr de 
 
 e.  **Abilități de viață, prevenirea unor comportamente cu risc, adicțiile:** 2 activități; 15 elevi; 2 cadre didactice;
 
-*„**Be a teacher for a change” – ***joc de rol prin care participanții au putut experimenta ce înseamnă să ai rolul de profesor  și cum poți îmbunătăți lumea din jur prin cunoștințele și abilitățile pe care le transmitem celorlalți.
+\*„**Be a teacher for a change” – \***joc de rol prin care participanții au putut experimenta ce înseamnă să ai rolul de profesor  și cum poți îmbunătăți lumea din jur prin cunoștințele și abilitățile pe care le transmitem celorlalți.
 
 f. **Consiliere și orientare:** 2 activități; 28 elevi; 2 cadre didactice;
 
-„***Where do we go from here?***” – activitate de brainstorming pentru elevii aflați în ultimul an de cursuri prin care să poată identifica care ar fi cel mai potrivit mod de a-și pune în aplicare propriile planuri de viitor.
+„**_Where do we go from here?_**” – activitate de brainstorming pentru elevii aflați în ultimul an de cursuri prin care să poată identifica care ar fi cel mai potrivit mod de a-și pune în aplicare propriile planuri de viitor.
 
 g. **Prevenirea violenței, a discriminării:** 2 activități; 15 participanți; 1 cadru didactic;1 partener (ANIALMG – Asociația Interpreților Autorizați în Limbaj Mimico-Gestual); resurse utilizate: materiale de informare pentru limbajul mimico-gestual;
 
-***„Comunicarea cu o persoană cu deficiență de auz” – ***în cadrul acestui atelier participanții au avut ocazia de a întâlni și comunica cu o persoană deficientă de auz și parțial de vorbire; au reușit să înțeleagă mai bine nevoile persoanelor cu deficiență de auz și de vorbire; au învățat modalități de comunicare cu acestea prin limbajul mimico-gestual;
+**_„Comunicarea cu o persoană cu deficiență de auz” – _**în cadrul acestui atelier participanții au avut ocazia de a întâlni și comunica cu o persoană deficientă de auz și parțial de vorbire; au reușit să înțeleagă mai bine nevoile persoanelor cu deficiență de auz și de vorbire; au învățat modalități de comunicare cu acestea prin limbajul mimico-gestual;
 
  **Alte activități desfășurate:**
 
@@ -118,7 +118,7 @@ Dintre categoriile de activități desfășurate în săptămâna „Școala Alt
 
 **Modalități și instrumente de monitorizare, evaluare, diseminare;**
 
-a)*   *completarea chestionarelor de către cursanți și cadrele didactice implicate
+a)\*   \*completarea chestionarelor de către cursanți și cadrele didactice implicate
 
 b)   Promovarea activităților și popularizarea rezultatelor pe site-ul școlii www.scoalachristiana.ro
 

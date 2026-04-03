@@ -1,7 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { SITE } from 'astrowind:config';
-import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
   text?: string;
@@ -31,7 +29,7 @@ export interface Props {
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], partners = [], footNote = '', theme = 'light' } = Astro.props;
+const { socialLinks = [], links = [], partners = [], footNote = '', theme = 'light' } = Astro.props;
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
@@ -51,12 +49,22 @@ const { socialLinks = [], secondaryLinks = [], links = [], partners = [], footNo
                   {imgEl}
                   <span class="text-sm text-muted dark:text-gray-400 whitespace-pre-line">{name}</span>
                 </div>
-              ) : imgEl;
+              ) : (
+                imgEl
+              );
               return href ? (
-                <a href={href} target="_blank" rel="noopener noreferrer" title={name} class="transition hover:opacity-80">
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={name}
+                  class="transition hover:opacity-80"
+                >
                   {content}
                 </a>
-              ) : content;
+              ) : (
+                content
+              );
             })}
           </div>
         </div>

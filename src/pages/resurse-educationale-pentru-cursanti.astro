@@ -12,7 +12,10 @@ const ghiduri = [
     nivel: 'Nivelul I primar',
     discipline: [
       { nume: 'Matematică', href: 'https://drive.google.com/open?id=1y7nSks6yCe_uwT33HmGpKrlCO8b60o60' },
-      { nume: 'Limba și literatura română', href: 'https://drive.google.com/open?id=1Ju1NcDOVDjNXZNSSzfBpm__d4l2ye_8k' },
+      {
+        nume: 'Limba și literatura română',
+        href: 'https://drive.google.com/open?id=1Ju1NcDOVDjNXZNSSzfBpm__d4l2ye_8k',
+      },
       { nume: 'Cultură civică', href: 'https://drive.google.com/open?id=1W720VUPCtNKQKGG_iG6-02GRQUHFNHXq' },
     ],
   },
@@ -91,52 +94,119 @@ const ghiduri = [
 
 <Layout metadata={metadata}>
   <Hero>
-    <Fragment slot="title">
-      Resurse educaționale pentru cursanți
-    </Fragment>
+    <Fragment slot="title"> Resurse educaționale pentru cursanți </Fragment>
   </Hero>
 
   <WidgetWrapper containerClass="max-w-4xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
     <article class="max-w-none px-4 md:px-8 space-y-6">
-      <div class="flex items-center gap-3 rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/30 p-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+      <div
+        class="flex items-center gap-3 rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/30 p-4"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+          ></path></svg
+        >
         <div>
           <p class="m-0 text-sm font-semibold">Ghiduri școlare program „A Doua Șansă"</p>
-          <p class="m-0 text-xs text-gray-500 dark:text-gray-400 mt-0.5">Pentru a accesa ghidurile trebuie să dați click pe numele disciplinei dorite. Manualul se va deschide într-o fereastră nouă de browser.</p>
+          <p class="m-0 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+            Pentru a accesa ghidurile trebuie să dați click pe numele disciplinei dorite. Manualul se va deschide într-o
+            fereastră nouă de browser.
+          </p>
         </div>
       </div>
 
       <div class="grid gap-3">
-        {ghiduri.map((g) => (
-          <div class="rounded-lg border border-gray-200 dark:border-slate-700 p-4">
-            <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-              {g.nivel}
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              {g.discipline.map((d) => (
-                d.href ? (
-                  <a href={d.href} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                    {d.nume}
-                  </a>
-                ) : (
-                  <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 px-3 py-1 text-xs font-medium text-gray-400 dark:text-gray-500">
-                    {d.nume}
-                  </span>
-                )
-              ))}
+        {
+          ghiduri.map((g) => (
+            <div class="rounded-lg border border-gray-200 dark:border-slate-700 p-4">
+              <h3 class="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2 flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 text-gray-400 dark:text-gray-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  />
+                </svg>
+                {g.nivel}
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                {g.discipline.map((d) =>
+                  d.href ? (
+                    <a
+                      href={d.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-3 h-3"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                        />
+                      </svg>
+                      {d.nume}
+                    </a>
+                  ) : (
+                    <span class="inline-flex items-center rounded-full bg-gray-100 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 px-3 py-1 text-xs font-medium text-gray-400 dark:text-gray-500">
+                      {d.nume}
+                    </span>
+                  )
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
 
       <hr class="border-gray-200 dark:border-slate-700" />
 
-      <div class="rounded-lg border border-gray-200 dark:border-slate-700 p-5 hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
+      <div
+        class="rounded-lg border border-gray-200 dark:border-slate-700 p-5 hover:border-blue-300 dark:hover:border-blue-700 transition-colors"
+      >
         <div class="flex items-start gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-          <a href="https://www.manuale.edu.ro/" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-blue-600 dark:text-blue-400 hover:underline">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+            ></path></svg
+          >
+          <a
+            href="https://www.manuale.edu.ro/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-lg font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+          >
             Manuale digitale
           </a>
         </div>

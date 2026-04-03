@@ -10,59 +10,65 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero>
-    <Fragment slot="title">
-      Programul „Săptămâna Verde"
-    </Fragment>
-    <Fragment slot="subtitle">
-      Programul școlar „Săptămâna Verde" — an școlar 2024-2025
-    </Fragment>
+    <Fragment slot="title"> Programul „Săptămâna Verde" </Fragment>
+    <Fragment slot="subtitle"> Programul școlar „Săptămâna Verde" — an școlar 2024-2025 </Fragment>
   </Hero>
 
   <div class="-mt-12 md:-mt-20">
-  <Content isAfterContent={true}>
-    <Fragment slot="content">
-      <div class="prose prose-lg max-w-4xl mx-auto">
-        <div class="bg-green-50 border-l-4 border-green-500 rounded-lg p-6 mb-8">
-          <p class="font-bold text-green-800">
-            În anul școlar 2024-2025 programul „Săptămâna Verde" se va desfășura în perioada 12-16 Mai 2025.
+    <Content isAfterContent={true}>
+      <Fragment slot="content">
+        <div class="prose prose-lg max-w-4xl mx-auto">
+          <div class="bg-green-50 border-l-4 border-green-500 rounded-lg p-6 mb-8">
+            <p class="font-bold text-green-800">
+              În anul școlar 2024-2025 programul „Săptămâna Verde" se va desfășura în perioada 12-16 Mai 2025.
+            </p>
+          </div>
+
+          <p>
+            Programul „<strong>Săptămâna verde</strong>" își propune completarea experiențelor de învățare ale elevilor
+            din cadrul disciplinelor/modulelor de studiu, cu accent pe componenta referitoare la schimbări climatice și
+            protecția mediului, scopul fiind formarea unor comportamente responsabile față de mediul înconjurător.
           </p>
+
+          <p>
+            Programul este în acord cu prevederile raportului „Educația privind schimbările climatice și mediul în școli
+            sustenabile", elaborat de către grupul de lucru de la nivelul Administrației Prezidențiale, ale „Strategiei
+            naționale privind educația pentru mediul și schimbări climatice 2023-2030", aprobată prin HG nr. 59/2023 și
+            ale „Strategiei naționale pentru dezvoltarea durabilă a României 2030" aprobată prin HG nr. 877/2018.
+          </p>
+
+          <h2>Documente</h2>
+          <ul class="space-y-3">
+            <li>
+              <a
+                href="/images/uploads/2023/02/Anexa_OM_3629_2023_Metodologie_Saptamana_Verde.pdf"
+                target="_blank"
+                rel="noopener"
+                class="text-primary font-semibold hover:underline"
+              >
+                Descarcă Metodologia de organizare a programului „Săptămâna Verde" — anexa la Ordinul M.E. nr.
+                3629/02.02.2023
+              </a>
+            </li>
+            <li>
+              <a
+                href="/images/uploads/2023/02/Strategia-National-pentru-mediu-si-schimbari-climatice_-2023-2030.pdf"
+                target="_blank"
+                rel="noopener"
+                class="text-primary font-semibold hover:underline"
+              >
+                Descarcă Strategia Națională privind Educația pentru mediu și schimbări climatice 2023-2030
+              </a>
+            </li>
+          </ul>
+
+          <img
+            src="/images/uploads/2023/02/0.43013100_1569136886_earth-in-forest-1.jpg"
+            alt="Educație pentru mediu"
+            class="rounded-lg my-6"
+          />
         </div>
-
-        <p>
-          Programul „<strong>Săptămâna verde</strong>" își propune completarea experiențelor de învățare ale elevilor
-          din cadrul disciplinelor/modulelor de studiu, cu accent pe componenta referitoare la schimbări climatice și
-          protecția mediului, scopul fiind formarea unor comportamente responsabile față de mediul înconjurător.
-        </p>
-
-        <p>
-          Programul este în acord cu prevederile raportului „Educația privind schimbările climatice și mediul în
-          școli sustenabile", elaborat de către grupul de lucru de la nivelul Administrației Prezidențiale, ale
-          „Strategiei naționale privind educația pentru mediul și schimbări climatice 2023-2030", aprobată prin
-          HG nr. 59/2023 și ale „Strategiei naționale pentru dezvoltarea durabilă a României 2030" aprobată
-          prin HG nr. 877/2018.
-        </p>
-
-        <h2>Documente</h2>
-        <ul class="space-y-3">
-          <li>
-            <a href="/images/uploads/2023/02/Anexa_OM_3629_2023_Metodologie_Saptamana_Verde.pdf" target="_blank" rel="noopener" class="text-primary font-semibold hover:underline">
-              Descarcă Metodologia de organizare a programului „Săptămâna Verde" — anexa la Ordinul M.E. nr. 3629/02.02.2023
-            </a>
-          </li>
-          <li>
-            <a href="/images/uploads/2023/02/Strategia-National-pentru-mediu-si-schimbari-climatice_-2023-2030.pdf" target="_blank" rel="noopener" class="text-primary font-semibold hover:underline">
-              Descarcă Strategia Națională privind Educația pentru mediu și schimbări climatice 2023-2030
-            </a>
-          </li>
-        </ul>
-
-        <img
-          src="/images/uploads/2023/02/0.43013100_1569136886_earth-in-forest-1.jpg"
-          alt="Educație pentru mediu"
-          class="rounded-lg my-6"
-        />
-      </div>
-    </Fragment>
-  </Content>
+      </Fragment>
+    </Content>
   </div>
 </Layout>

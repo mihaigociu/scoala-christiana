@@ -28,11 +28,10 @@ const documente_secundar = [
 
 <Layout metadata={metadata}>
   <Hero>
-    <Fragment slot="title">
-      Înscriere în programul „A Doua Șansă"
-    </Fragment>
+    <Fragment slot="title"> Înscriere în programul „A Doua Șansă" </Fragment>
     <Fragment slot="subtitle">
-      Înscrierea în program este gratuită și permisă oricărei persoane care se încadrează în condițiile prevăzute de metodologie.
+      Înscrierea în program este gratuită și permisă oricărei persoane care se încadrează în condițiile prevăzute de
+      metodologie.
     </Fragment>
   </Hero>
 
@@ -45,23 +44,32 @@ const documente_secundar = [
       </p>
 
       <p class="text-lg mb-4">
-        Se pot înscrie persoane care au depășit cu cel puțin 4 ani vârsta de școlarizare corespunzătoare clasei și care se află în una dintre următoarele situații:
+        Se pot înscrie persoane care au depășit cu cel puțin 4 ani vârsta de școlarizare corespunzătoare clasei și care
+        se află în una dintre următoarele situații:
       </p>
       <ul class="mb-8 space-y-2 pl-2">
-        <li class="flex gap-2"><span class="font-semibold shrink-0">a)</span> nu au parcurs nicio clasă din învățământul primar;</li>
-        <li class="flex gap-2"><span class="font-semibold shrink-0">b)</span> au abandonat școala pe parcursul învățământului primar.</li>
+        <li class="flex gap-2">
+          <span class="font-semibold shrink-0">a)</span> nu au parcurs nicio clasă din învățământul primar;
+        </li>
+        <li class="flex gap-2">
+          <span class="font-semibold shrink-0">b)</span> au abandonat școala pe parcursul învățământului primar.
+        </li>
       </ul>
 
       <p class="text-lg mb-4">
         Înscrierea se face pe bază de cerere, depusă la secretariatul școlii, însoțită de următoarele documente:
       </p>
       <ul class="space-y-3">
-        {documente_primar.map((doc) => (
-          <li class="flex gap-3 p-3 rounded-lg bg-gray-50 dark:bg-slate-800">
-            <span class="mt-0.5 shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 text-xs font-bold">✓</span>
-            <span class="text-gray-700 dark:text-slate-300">{doc}</span>
-          </li>
-        ))}
+        {
+          documente_primar.map((doc) => (
+            <li class="flex gap-3 p-3 rounded-lg bg-gray-50 dark:bg-slate-800">
+              <span class="mt-0.5 shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 text-xs font-bold">
+                ✓
+              </span>
+              <span class="text-gray-700 dark:text-slate-300">{doc}</span>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </WidgetWrapper>
@@ -75,23 +83,34 @@ const documente_secundar = [
       </p>
 
       <p class="text-lg mb-4">
-        Se pot înscrie persoane care au depășit cu cel puțin 4 ani vârsta corespunzătoare clasei și care se află în una din următoarele situații:
+        Se pot înscrie persoane care au depășit cu cel puțin 4 ani vârsta corespunzătoare clasei și care se află în una
+        din următoarele situații:
       </p>
       <ul class="mb-6 space-y-2 pl-2">
-        <li class="flex gap-2 items-start"><span class="mt-2 w-2 h-2 rounded-full bg-primary shrink-0"></span> au absolvit învățământul primar;</li>
-        <li class="flex gap-2 items-start"><span class="mt-2 w-2 h-2 rounded-full bg-primary shrink-0"></span> au parcurs una sau mai multe clase din învățământul gimnazial (a V-a, a VI-a, a VII-a).</li>
+        <li class="flex gap-2 items-start">
+          <span class="mt-2 w-2 h-2 rounded-full bg-primary shrink-0"></span> au absolvit învățământul primar;
+        </li>
+        <li class="flex gap-2 items-start">
+          <span class="mt-2 w-2 h-2 rounded-full bg-primary shrink-0"></span> au parcurs una sau mai multe clase din învățământul
+          gimnazial (a V-a, a VI-a, a VII-a).
+        </li>
       </ul>
 
       <p class="text-lg mb-4">
-        Înscrierea se face fără examen, pe bază de cerere în care se completează clasele absolvite și opțiunea pentru traseul educațional. Cererea este însoțită de:
+        Înscrierea se face fără examen, pe bază de cerere în care se completează clasele absolvite și opțiunea pentru
+        traseul educațional. Cererea este însoțită de:
       </p>
       <ul class="space-y-3">
-        {documente_secundar.map((doc) => (
-          <li class="flex gap-3 p-3 rounded-lg bg-gray-50 dark:bg-slate-800">
-            <span class="mt-0.5 shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 text-xs font-bold">✓</span>
-            <span class="text-gray-700 dark:text-slate-300">{doc}</span>
-          </li>
-        ))}
+        {
+          documente_secundar.map((doc) => (
+            <li class="flex gap-3 p-3 rounded-lg bg-gray-50 dark:bg-slate-800">
+              <span class="mt-0.5 shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400 text-xs font-bold">
+                ✓
+              </span>
+              <span class="text-gray-700 dark:text-slate-300">{doc}</span>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </WidgetWrapper>
@@ -116,12 +135,16 @@ const documente_secundar = [
           <p class="text-sm text-muted dark:text-slate-400">Durata standard: 3 ani</p>
         </div>
         <div class="p-5 rounded-xl border border-gray-200 dark:border-slate-700">
-          <p class="text-xs font-semibold uppercase tracking-wide text-muted mb-2">Cu calificare profesională nivel 2</p>
+          <p class="text-xs font-semibold uppercase tracking-wide text-muted mb-2">
+            Cu calificare profesională nivel 2
+          </p>
           <p class="font-semibold mb-1">Clasele V–VIII (gimnaziu)</p>
           <p class="text-sm text-muted dark:text-slate-400">Durata standard: 3 ani</p>
         </div>
         <div class="p-5 rounded-xl border border-gray-200 dark:border-slate-700">
-          <p class="text-xs font-semibold uppercase tracking-wide text-muted mb-2">Cu calificare profesională nivel 3</p>
+          <p class="text-xs font-semibold uppercase tracking-wide text-muted mb-2">
+            Cu calificare profesională nivel 3
+          </p>
           <p class="font-semibold mb-1">Clasele V–X (filieră tehnologică)</p>
           <p class="text-sm text-muted dark:text-slate-400">Durata standard: 4 ani</p>
         </div>
@@ -158,5 +181,4 @@ const documente_secundar = [
       </div>
     </div>
   </WidgetWrapper>
-
 </Layout>

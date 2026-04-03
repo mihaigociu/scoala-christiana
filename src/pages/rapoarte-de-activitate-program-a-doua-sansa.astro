@@ -33,9 +33,7 @@ const rapoarte = [
 
 <Layout metadata={metadata}>
   <Hero tagline='Programul "A Doua Sansa"'>
-    <Fragment slot="title">
-      Rapoarte de activitate
-    </Fragment>
+    <Fragment slot="title"> Rapoarte de activitate </Fragment>
     <Fragment slot="subtitle">
       Rapoartele anuale de activitate ale programului „A Doua Sansa" din cadrul Scolii Gimnaziale Christiana
     </Fragment>
@@ -44,14 +42,21 @@ const rapoarte = [
   <WidgetWrapper containerClass="max-w-3xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12">
     <div class="px-4 md:px-8">
       <ul class="space-y-3">
-        {rapoarte.map((r) => (
-          <li class="p-4 rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900">
-            {r.href
-              ? <a href={r.href} class="text-primary font-semibold hover:underline">Descarca raportul de activitate — anul scolar {r.an}</a>
-              : <span class="text-muted dark:text-slate-400">Raport de activitate — anul scolar {r.an} <em class="text-sm">(in curs de publicare)</em></span>
-            }
-          </li>
-        ))}
+        {
+          rapoarte.map((r) => (
+            <li class="p-4 rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900">
+              {r.href ? (
+                <a href={r.href} class="text-primary font-semibold hover:underline">
+                  Descarca raportul de activitate — anul scolar {r.an}
+                </a>
+              ) : (
+                <span class="text-muted dark:text-slate-400">
+                  Raport de activitate — anul scolar {r.an} <em class="text-sm">(in curs de publicare)</em>
+                </span>
+              )}
+            </li>
+          ))
+        }
       </ul>
     </div>
   </WidgetWrapper>

@@ -8,6 +8,6 @@ category: noutati
 
 ![](/images/uploads/2019/04/inviere-domn1-com-300x257.jpg)
 
-*Cu ocazia sfintelor sărbători pascale vă dorim să aveți bucurie, pace și liniște în sufletele dumneavoastră alături de cei dragi.*
+_Cu ocazia sfintelor sărbători pascale vă dorim să aveți bucurie, pace și liniște în sufletele dumneavoastră alături de cei dragi._
 
-*Hristos a Înviat!*
+_Hristos a Înviat!_

@@ -1,7 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Școala Gimnazială Christiana — Programul „A Doua Șansă"',
@@ -9,8 +8,14 @@ const metadata = {
 };
 
 const galleryImages = [
-  { src: '/images/uploads/2024/04/Banner-2-homepage-1024x722.jpg', alt: 'Școala Gimnazială Christiana — Programul A Doua Șansă' },
-  { src: '/images/uploads/2024/04/Banner-homepage-site-avantaje-A2S-1-1024x722.jpg', alt: 'Avantajele Programului A Doua Șansă' },
+  {
+    src: '/images/uploads/2024/04/Banner-2-homepage-1024x722.jpg',
+    alt: 'Școala Gimnazială Christiana — Programul A Doua Șansă',
+  },
+  {
+    src: '/images/uploads/2024/04/Banner-homepage-site-avantaje-A2S-1-1024x722.jpg',
+    alt: 'Avantajele Programului A Doua Șansă',
+  },
   { src: '/images/uploads/2016/05/dscn1853-1024x768.jpg', alt: 'Școala Gimnazială Christiana' },
   { src: '/images/uploads/2016/05/dscn1854-1024x768.jpg', alt: 'Curtea școlii' },
   { src: '/images/uploads/2016/05/dscn1857-1024x768.jpg', alt: 'Activități școlare' },
@@ -27,16 +32,13 @@ const galleryImages = [
   <section class="relative w-full max-w-5xl mx-auto mt-6 mb-8 px-4">
     <div class="relative overflow-hidden rounded-xl shadow-lg bg-white" id="gallery">
       <div class="flex transition-transform duration-500 ease-in-out" id="gallery-track">
-        {galleryImages.map((img) => (
-          <div class="w-full flex-shrink-0">
-            <img
-              src={img.src}
-              alt={img.alt}
-              class="w-full h-auto"
-              loading="lazy"
-            />
-          </div>
-        ))}
+        {
+          galleryImages.map((img) => (
+            <div class="w-full flex-shrink-0">
+              <img src={img.src} alt={img.alt} class="w-full h-auto" loading="lazy" />
+            </div>
+          ))
+        }
       </div>
       <!-- Navigation arrows -->
       <button
@@ -55,13 +57,15 @@ const galleryImages = [
       </button>
       <!-- Dots -->
       <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2" id="gallery-dots">
-        {galleryImages.map((_, i) => (
-          <button
-            class:list={['w-3 h-3 rounded-full transition', i === 0 ? 'bg-white' : 'bg-white/50']}
-            data-index={i}
-            aria-label={`Imaginea ${i + 1}`}
-          />
-        ))}
+        {
+          galleryImages.map((_, i) => (
+            <button
+              class:list={['w-3 h-3 rounded-full transition', i === 0 ? 'bg-white' : 'bg-white/50']}
+              data-index={i}
+              aria-label={`Imaginea ${i + 1}`}
+            />
+          ))
+        }
       </div>
     </div>
   </section>
@@ -87,8 +91,14 @@ const galleryImages = [
         });
       }
 
-      prevBtn.addEventListener('click', () => { goTo(current - 1); resetAutoplay(); });
-      nextBtn.addEventListener('click', () => { goTo(current + 1); resetAutoplay(); });
+      prevBtn.addEventListener('click', () => {
+        goTo(current - 1);
+        resetAutoplay();
+      });
+      nextBtn.addEventListener('click', () => {
+        goTo(current + 1);
+        resetAutoplay();
+      });
       dots.forEach((dot) => {
         dot.addEventListener('click', () => {
           goTo(Number((dot as HTMLElement).dataset.index));
@@ -122,13 +132,17 @@ const galleryImages = [
         Înscrieri în programul „A Doua Șansă" pentru anul școlar 2025-2026
       </h2>
       <p class="text-gray-700 mb-4">
-        Dosarele de înscriere în programul „A Doua Șansă" se pot depune la secretariatul școlii
-        în intervalul <strong>Luni-Vineri</strong>, între orele <strong>09:00 - 16:00</strong>.
+        Dosarele de înscriere în programul „A Doua Șansă" se pot depune la secretariatul școlii în intervalul <strong
+          >Luni-Vineri</strong
+        >, între orele <strong>09:00 - 16:00</strong>.
       </p>
 
       <h3 class="text-lg font-semibold text-gray-800 mb-2">Documente necesare pentru dosarul de înscriere:</h3>
       <ul class="list-disc list-inside text-gray-700 space-y-1 mb-6">
-        <li>Act de identitate în copie și original (pentru beneficiarii minori se vor prezenta și documentele părinților/reprezentanților legali)</li>
+        <li>
+          Act de identitate în copie și original (pentru beneficiarii minori se vor prezenta și documentele
+          părinților/reprezentanților legali)
+        </li>
         <li>Certificat de naștere în copie și original</li>
         <li>Certificat de căsătorie în copie și original (dacă este cazul)</li>
         <li>Adeverință școlară / foaie matricolă de la ultima școală absolvită</li>
@@ -159,5 +173,4 @@ const galleryImages = [
     title="Ultimele noutăți"
     information="Cele mai recente informații despre activitățile și evenimentele din cadrul Școlii Gimnaziale Christiana."
   />
-
 </Layout>

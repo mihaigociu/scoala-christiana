@@ -170,9 +170,7 @@ export const headerData = {
 
 export const footerData = {
   links: [],
-  secondaryLinks: [
-    { text: 'GDPR', href: getPermalink('/informare-gdpr') },
-  ],
+  secondaryLinks: [{ text: 'GDPR', href: getPermalink('/informare-gdpr') }],
   partners: [
     {
       name: 'Arhiepiscopia\nOrtodoxă a Vadului,\nFeleacului și Clujului',
