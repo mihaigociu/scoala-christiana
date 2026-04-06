@@ -29,7 +29,7 @@ const galleryImages = [
 
 <Layout metadata={metadata}>
   <!-- Image Gallery / Carousel -->
-  <section class="relative w-full max-w-5xl mx-auto mt-6 mb-8 px-4">
+  <section class="relative w-full max-w-3xl mx-auto mt-6 mb-8 px-4">
     <div class="relative overflow-hidden rounded-xl shadow-lg bg-white" id="gallery">
       <div class="flex transition-transform duration-500 ease-in-out" id="gallery-track">
         {
@@ -114,6 +114,12 @@ const galleryImages = [
     });
   </script>
 
+  <!-- Latest blog posts -->
+  <BlogLatestPosts
+    title="Ultimele noutăți"
+    information="Cele mai recente informații despre activitățile și evenimentele din cadrul Școlii Gimnaziale Christiana."
+  />
+
   <!-- Homepage Text Content (matching old WordPress homepage) -->
   <section class="max-w-4xl mx-auto px-4 py-8">
     <!-- Structure link -->
@@ -167,10 +173,4 @@ const galleryImages = [
       </div>
     </div>
   </section>
-
-  <!-- Latest blog posts -->
-  <BlogLatestPosts
-    title="Ultimele noutăți"
-    information="Cele mai recente informații despre activitățile și evenimentele din cadrul Școlii Gimnaziale Christiana."
-  />
 </Layout>
