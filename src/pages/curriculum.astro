@@ -1,7 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'Curriculum — Programul „A Doua Șansă"',
@@ -17,9 +16,8 @@ const metadata = {
   </Hero>
 
   <div class="-mt-12 md:-mt-20">
-    <Content isAfterContent={true}>
-      <Fragment slot="content">
-        <div class="prose prose-lg max-w-5xl mx-auto">
+    <section class="mx-auto max-w-7xl px-4 md:px-8 pb-16">
+      <div class="prose prose-lg max-w-none mx-auto">
           <h2>Nivelul primar</h2>
           <div class="overflow-x-auto">
             <table class="w-full border-collapse text-sm">
@@ -222,8 +220,7 @@ const metadata = {
               </tbody>
             </table>
           </div>
-        </div>
-      </Fragment>
-    </Content>
+      </div>
+    </section>
   </div>
 </Layout>
