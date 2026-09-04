@@ -49,10 +49,10 @@ Detalii care contează:
 Trei plugin-uri definite în `src/utils/frontmatter.ts` se aplică tuturor fișierelor Markdown:
 
 - `readingTimeRemarkPlugin` — injectează `readingTime` în frontmatter.
-- `responsiveTablesRehypePlugin` — împachetează tabelele în `<div style="overflow:auto">`. **Atenție: doar tabelele de la nivelul rădăcină al documentului.** Un tabel imbricat (într-o listă, într-un blockquote) nu devine scrollabil pe mobil.
+- `responsiveTablesRehypePlugin` — ar trebui să împacheteze tabelele în `<div style="overflow:auto">` pentru scroll orizontal pe mobil, dar **în practică nu se declanșează niciodată pe postările existente.** Pluginul caută noduri `type === 'element'` cu `tagName === 'table'`, iar tabelele scrise ca HTML brut în Markdown ajung ca noduri `raw`, nu `element`. Verificat pe server: nici tabelul de pe pagina de concurs, nici cele 7 din calendarul 2025-2026 nu au wrapper `overflow:auto`. Ar funcționa doar pe tabele în sintaxă Markdown (pipe), pe care nicio postare nu le folosește. Concluzie: tabelele largi nu sunt scrollabile pe ecrane înguste — comportament valabil pe tot site-ul, nu o regresie.
 - `lazyImagesRehypePlugin` — adaugă `loading="lazy"` la `<img>`.
 
-Convenția din postările existente pentru date tabelare (orare, calendare, tabele de posturi) este **HTML brut `<table>` scris pe un singur rând**, la nivel rădăcină — vezi `src/data/post/calendarul-examenelor-anul-scolar-2025-2026-programul-a-doua-sansa.md`. Fișierele `.md` **nu pot** folosi componente Astro; doar `.mdx` poate (MDX e activat, dar nicio postare nu îl folosește încă).
+Convenția din postările existente pentru date tabelare (orare, calendare, tabele de posturi) este **HTML brut `<table>` scris pe un singur rând** — vezi `src/data/post/calendarul-examenelor-anul-scolar-2025-2026-programul-a-doua-sansa.md`. Fișierele `.md` **nu pot** folosi componente Astro; doar `.mdx` poate (MDX e activat, dar nicio postare nu îl folosește încă).
 
 ### Pagini statice
 
