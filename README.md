@@ -42,13 +42,13 @@ Când faci un build, Astro generează HTML pur în folderul `dist/`, care apoi e
 
 ## 2. Tehnologii folosite
 
-| Tehnologie | Rol | De ce contează pentru tine |
-|---|---|---|
-| [Astro 5](https://astro.build/) | Framework de site static | Definește formatul fișierelor `.astro` și cum se generează paginile |
-| [Tailwind CSS 3](https://tailwindcss.com/) | Stilizare prin clase utilitare | Aproape tot stilul se face cu clase în HTML (ex: `class="text-xl font-bold"`) |
-| [MDX](https://mdxjs.com/) | Markdown + componente | Folosit pentru articole/noutăți |
-| [AstroWind](https://github.com/onwidget/astrowind) | Template de bază | Multe componente (Hero, Header, Footer etc.) vin de aici |
-| [TypeScript](https://www.typescriptlang.org/) | Tipuri pentru JS | Folosit în scripturi și config; nu e nevoie de cunoștințe avansate |
+| Tehnologie                                         | Rol                            | De ce contează pentru tine                                                    |
+| -------------------------------------------------- | ------------------------------ | ----------------------------------------------------------------------------- |
+| [Astro 5](https://astro.build/)                    | Framework de site static       | Definește formatul fișierelor `.astro` și cum se generează paginile           |
+| [Tailwind CSS 3](https://tailwindcss.com/)         | Stilizare prin clase utilitare | Aproape tot stilul se face cu clase în HTML (ex: `class="text-xl font-bold"`) |
+| [MDX](https://mdxjs.com/)                          | Markdown + componente          | Folosit pentru articole/noutăți                                               |
+| [AstroWind](https://github.com/onwidget/astrowind) | Template de bază               | Multe componente (Hero, Header, Footer etc.) vin de aici                      |
+| [TypeScript](https://www.typescriptlang.org/)      | Tipuri pentru JS               | Folosit în scripturi și config; nu e nevoie de cunoștințe avansate            |
 
 Site-ul a pornit de la template-ul AstroWind, deci o parte din cod (mai ales `src/components/`, `src/utils/` și `vendor/`) este moștenit din template și **rar trebuie atins**. Tu vei lucra cel mai des în `src/pages/`, `src/data/post/` și `src/navigation.ts`.
 
@@ -86,16 +86,16 @@ Serverul de dev pornește de obicei pe **http://localhost:4321**. Are **hot relo
 
 ## 5. Comenzi npm
 
-| Comandă | Ce face |
-|---|---|
-| `npm run dev` | Pornește serverul local de dezvoltare (cu hot reload) |
-| `npm run build` | Generează site-ul de producție în `dist/` |
-| `npm run preview` | Servește local build-ul din `dist/` (verifici cum arată producția) |
-| `npm run check` | **Verificare completă**: Astro + ESLint + Prettier. Rulează asta înainte de commit |
-| `npm run check:astro` | Doar verificarea de tipuri/erori Astro |
-| `npm run check:eslint` | Doar ESLint (calitatea codului) |
-| `npm run check:prettier` | Doar Prettier (formatare) — verifică, nu modifică |
-| `npm run fix` | Repară automat ce se poate: ESLint `--fix` + Prettier `-w` |
+| Comandă                  | Ce face                                                                            |
+| ------------------------ | ---------------------------------------------------------------------------------- |
+| `npm run dev`            | Pornește serverul local de dezvoltare (cu hot reload)                              |
+| `npm run build`          | Generează site-ul de producție în `dist/`                                          |
+| `npm run preview`        | Servește local build-ul din `dist/` (verifici cum arată producția)                 |
+| `npm run check`          | **Verificare completă**: Astro + ESLint + Prettier. Rulează asta înainte de commit |
+| `npm run check:astro`    | Doar verificarea de tipuri/erori Astro                                             |
+| `npm run check:eslint`   | Doar ESLint (calitatea codului)                                                    |
+| `npm run check:prettier` | Doar Prettier (formatare) — verifică, nu modifică                                  |
+| `npm run fix`            | Repară automat ce se poate: ESLint `--fix` + Prettier `-w`                         |
 
 > ⚠️ **Important:** întotdeauna rulează `npm run check` (verificarea completă) înainte de commit/push, nu doar `astro check`. CI-ul (GitHub Actions) rulează aceleași verificări și va pica build-ul dacă sunt erori de lint sau de formatare.
 
@@ -153,10 +153,10 @@ Dacă n-ai mai lucrat cu Astro, citește asta — îți explică tot ce-ți treb
 
 Numele fișierului din `src/pages/` **devine URL-ul paginii**:
 
-| Fișier | URL |
-|---|---|
-| `src/pages/index.astro` | `/` |
-| `src/pages/contact.astro` | `/contact` |
+| Fișier                          | URL              |
+| ------------------------------- | ---------------- |
+| `src/pages/index.astro`         | `/`              |
+| `src/pages/contact.astro`       | `/contact`       |
 | `src/pages/cursanti/orar.astro` | `/cursanti/orar` |
 
 Fișierele între paranteze (`[...blog]`) sunt **rute dinamice** — generează mai multe pagini dintr-un șablon (aici, paginile de noutăți). Pe acestea nu va trebui să le modifici la început.
@@ -170,7 +170,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 
 const metadata = {
-  title: 'Despre noi',   // titlul din tab-ul browserului + SEO
+  title: 'Despre noi', // titlul din tab-ul browserului + SEO
 };
 ---
 
@@ -195,8 +195,7 @@ const metadata = {
 În import-uri, `~` înseamnă folderul `src/`. Deci:
 
 ```astro
-import Hero from '~/components/widgets/Hero.astro';
-// este echivalent cu src/components/widgets/Hero.astro
+import Hero from '~/components/widgets/Hero.astro'; // este echivalent cu src/components/widgets/Hero.astro
 ```
 
 Folosește mereu `~/...` în loc de căi relative cu multe `../../`.
@@ -293,13 +292,16 @@ Structura unui element de meniu:
 ### 8.4 Adaug o imagine
 
 - **Imagine de conținut într-o pagină** → pune-o în `src/assets/images/`, import-o și folosește componenta `Image`:
+
   ```astro
   ---
   import Image from '~/components/common/Image.astro';
   import poza from '~/assets/images/poza.jpg';
   ---
+
   <Image src={poza} alt="Descriere" />
   ```
+
 - **PDF / document descărcabil / imagine cu URL fix** → pune-l în `public/images/` (sau `public/`) și referă-l prin URL direct: `/images/document.pdf`.
 
 ### 8.5 Modific textul unei pagini existente
@@ -420,16 +422,16 @@ Fluxul complet al unei schimbări: **branch → PR → merge în `main` → Netl
 
 ## 12. Greșeli frecvente / depanare
 
-| Problemă | Cauză / soluție |
-|---|---|
-| `npm run dev` nu pornește | Versiune greșită de Node. Verifică `node --version` față de `engines` din `package.json`. |
-| Modificările nu apar în browser | Salvează fișierul; dacă tot nu apare, oprește și repornește `npm run dev`. |
-| Pagina nouă dă 404 | Verifică numele/locul fișierului în `src/pages/` — el dictează URL-ul. Repornește dev serverul. |
-| Link de meniu greșit | Ai folosit `getPermalink('/cale')`? Link-urile interne scrise „de mână" pot rata `base`/`trailingSlash`. |
-| `npm run check` pică pe Prettier | Rulează `npm run fix`, apoi `npm run check` din nou. |
-| Imaginea nu se încarcă | Din `src/assets/` se importă în cod; din `public/` se referă prin URL direct (`/images/...`). Nu le amesteca. |
-| Am editat ceva în `dist/` și s-a pierdut | `dist/` e generat de build — se suprascrie. Editează în `src/`. |
-| Articol nou nu apare | Verifică frontmatter-ul (titlu obligatoriu, dată validă) și că nu ai `draft: true`. |
+| Problemă                                 | Cauză / soluție                                                                                               |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `npm run dev` nu pornește                | Versiune greșită de Node. Verifică `node --version` față de `engines` din `package.json`.                     |
+| Modificările nu apar în browser          | Salvează fișierul; dacă tot nu apare, oprește și repornește `npm run dev`.                                    |
+| Pagina nouă dă 404                       | Verifică numele/locul fișierului în `src/pages/` — el dictează URL-ul. Repornește dev serverul.               |
+| Link de meniu greșit                     | Ai folosit `getPermalink('/cale')`? Link-urile interne scrise „de mână" pot rata `base`/`trailingSlash`.      |
+| `npm run check` pică pe Prettier         | Rulează `npm run fix`, apoi `npm run check` din nou.                                                          |
+| Imaginea nu se încarcă                   | Din `src/assets/` se importă în cod; din `public/` se referă prin URL direct (`/images/...`). Nu le amesteca. |
+| Am editat ceva în `dist/` și s-a pierdut | `dist/` e generat de build — se suprascrie. Editează în `src/`.                                               |
+| Articol nou nu apare                     | Verifică frontmatter-ul (titlu obligatoriu, dată validă) și că nu ai `draft: true`.                           |
 
 ---
 
