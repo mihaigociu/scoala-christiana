@@ -105,7 +105,7 @@ export const headerData = {
       href: getPermalink('/cursanti/orar'),
       links: [
         {
-          text: 'Oferta liceelor pentru anul școlar 2025-2026',
+          text: 'Oferta liceelor pentru anul școlar 2026-2027',
           href: getPermalink('/cursanti/unitati-de-invatamant-cu-program-liceal-seral'),
         },
         {
@@ -115,10 +115,6 @@ export const headerData = {
         {
           text: 'Orar școlar',
           href: getPermalink('/cursanti/orar'),
-        },
-        {
-          text: 'Școala Altfel',
-          href: getPermalink('/cursanti/scoala-altfel'),
         },
         {
           text: 'Ghiduri școlare cursanți',
@@ -131,10 +127,6 @@ export const headerData = {
         {
           text: 'Anul II secundar inferior',
           href: getPermalink('/cursanti/anul-ii-gimnazial'),
-        },
-        {
-          text: 'Anul IV secundar inferior',
-          href: getPermalink('/cursanti/anul-iv-gimnazial'),
         },
       ],
     },
