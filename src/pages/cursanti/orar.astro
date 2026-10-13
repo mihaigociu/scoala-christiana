@@ -1,26 +1,81 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 
 const metadata = {
-  title: 'Orar școlar',
+  title: 'Orar școlar 2026-2027',
 };
+
+const zile = ['Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri'];
+
+// Fiecare rând: interval orar + disciplina pentru luni–vineri ('' = fără oră)
+const orare = [
+  {
+    an: 'Anul I gimnazial',
+    randuri: [
+      { ora: '14.00-15.00', ore: ['', 'Consiliere', '', '', ''] },
+      { ora: '15.00-16.00', ore: ['', 'Matematică', '', 'Istorie', 'Limba engleză'] },
+      {
+        ora: '16.00-17.00',
+        ore: ['Tehnologia informațiilor și comunicațiilor', 'Matematică', '', 'Geografie', 'Limba engleză'],
+      },
+      { ora: '17.00-18.00', ore: ['Cultură civică', 'Matematică', 'Științe', 'Limba și literatura română', ''] },
+      { ora: '18.00-19.00', ore: ['Cultură civică', 'Educație plastică', 'Științe', 'Limba și literatura română', ''] },
+      { ora: '19.00-20.00', ore: ['', 'Educație plastică', 'Științe', 'Limba și literatura română', ''] },
+    ],
+  },
+  {
+    an: 'Anul II gimnazial',
+    randuri: [
+      { ora: '15.00-16.00', ore: ['Limba franceză', 'Consiliere', '', '', ''] },
+      { ora: '16.00-17.00', ore: ['', 'Limba și literatura română', '', 'Istorie', ''] },
+      { ora: '17.00-18.00', ore: ['Matematică', 'Limba și literatura română', '', 'Geografie', 'Limba engleză'] },
+      { ora: '18.00-19.00', ore: ['Matematică', 'Limba și literatura română', '', 'Geografie', ''] },
+    ],
+  },
+];
+
+const cell = 'border border-gray-300 p-3';
 ---
 
 <Layout metadata={metadata}>
   <Hero>
-    <Fragment slot="title"> Orar școlar </Fragment>
-    <Fragment slot="subtitle"> Orarul cursurilor pentru anul școlar curent </Fragment>
+    <Fragment slot="title"> Orar școlar 2026-2027 </Fragment>
+    <Fragment slot="subtitle"> Orarul cursurilor pentru nivelul gimnazial — programul „A Doua Șansă” </Fragment>
   </Hero>
 
-  <div class="-mt-12 md:-mt-20">
-    <Content isAfterContent={true}>
-      <Fragment slot="content">
-        <div class="prose prose-lg max-w-4xl mx-auto">
-          <p>Orarul școlar va fi afișat în perioada următoare.</p>
+  {
+    orare.map((orar, i) => (
+      <WidgetWrapper
+        containerClass={i === 0 ? 'max-w-5xl mx-auto pt-0 md:pt-0 lg:pt-0 -mt-8 md:-mt-12' : 'max-w-5xl mx-auto'}
+      >
+        <div class="px-4 md:px-8">
+          <h2 class="text-2xl font-bold mb-6">{orar.an}</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class={`${cell} text-left font-semibold`}>Ora / Ziua</th>
+                  {zile.map((zi) => (
+                    <th class={`${cell} text-left font-semibold`}>{zi}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {orar.randuri.map((r) => (
+                  <tr>
+                    <td class={`${cell} font-semibold whitespace-nowrap bg-gray-50`}>{r.ora}</td>
+                    {r.ore.map((disciplina) => (
+                      <td class={disciplina ? `${cell} bg-blue-50` : cell}>{disciplina}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </Fragment>
-    </Content>
-  </div>
+      </WidgetWrapper>
+    ))
+  }
 </Layout>

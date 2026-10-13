@@ -4,7 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 
 const metadata = {
-  title: 'Rapoarte de activitate — Programul A Doua Sansa',
+  title: 'Rapoarte de activitate — Programul „A Doua Șansă”',
 };
 
 const rapoarte = [
@@ -22,20 +22,24 @@ const rapoarte = [
   },
   {
     an: '2022-2023',
-    href: '',
+    href: '/images/uploads/2026/10/Raport-de-activitate-Scoala-Gimn-Christiana-2022-2023.pdf',
   },
   {
     an: '2023-2024',
     href: '/images/uploads/2025/04/Raport-de-activitate-Scoala-Gimn-Christiana-2023-2024.pdf',
   },
+  {
+    an: '2024-2025',
+    href: '/images/uploads/2026/10/Raport-de-activitate-Scoala-Gimn-Christiana-2024-2025.pdf',
+  },
 ];
 ---
 
 <Layout metadata={metadata}>
-  <Hero tagline='Programul "A Doua Sansa"'>
+  <Hero tagline="Programul „A Doua Șansă”">
     <Fragment slot="title"> Rapoarte de activitate </Fragment>
     <Fragment slot="subtitle">
-      Rapoartele anuale de activitate ale programului „A Doua Sansa" din cadrul Scolii Gimnaziale Christiana
+      Rapoartele anuale de activitate ale programului „A Doua Șansă” din cadrul Școlii Gimnaziale Christiana
     </Fragment>
   </Hero>
 
@@ -47,11 +51,11 @@ const rapoarte = [
             <li class="p-4 rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900">
               {r.href ? (
                 <a href={r.href} class="text-primary font-semibold hover:underline">
-                  Descarca raportul de activitate — anul scolar {r.an}
+                  Descarcă raportul de activitate — anul școlar {r.an}
                 </a>
               ) : (
                 <span class="text-muted dark:text-slate-400">
-                  Raport de activitate — anul scolar {r.an} <em class="text-sm">(in curs de publicare)</em>
+                  Raport de activitate — anul școlar {r.an} <em class="text-sm">(în curs de publicare)</em>
                 </span>
               )}
             </li>
